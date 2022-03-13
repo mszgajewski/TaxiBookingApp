@@ -4,6 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/splashbackground"
     tools:context=".LoginActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/layout_button_login"
+        android:drawableLeft="@drawable/phone"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="Continue With Google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_button_login"
+        android:drawableLeft="@drawable/phone"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="Continue With Phone"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="@+id/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
