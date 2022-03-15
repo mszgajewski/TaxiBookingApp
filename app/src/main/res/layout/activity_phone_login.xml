@@ -8,47 +8,93 @@
     android:background="@drawable/login_background"
     tools:context=".PhoneLoginActivity">
 
-    <com.hbb20.CountryCodePicker
-        android:id="@+id/ccp"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="1"
-        android:background="@drawable/spinner_login"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:ccp_defaultPhoneCode="48"/>
+        app:layout_constraintVertical_bias="0.0 ">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:textColor="@color/colorPrimaryDark"
-        android:inputType="number"
-        android:maxLength="9"
-        android:padding="8dp"
-        android:hint="Tel. 123456789"
-        android:textColorHighlight="@color/colorGrey"
-        android:background="@drawable/spinner_login"
-        app:layout_constraintBottom_toBottomOf="@+id/ccp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ccp"
-        app:layout_constraintTop_toTopOf="@+id/ccp" />
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:ccp_defaultPhoneCode="48"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:textColor="@color/colorPrimaryDark"
+            android:inputType="number"
+            android:maxLength="9"
+            android:padding="8dp"
+            android:hint="Tel. 123456789"
+            android:textColorHighlight="@color/colorGrey"
+            android:background="@drawable/spinner_login"
+            app:layout_constraintBottom_toBottomOf="@+id/ccp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ccp"
+            app:layout_constraintTop_toTopOf="@+id/ccp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="8dp"
         android:indeterminate="true"
+        android:visibility="gone"
         android:progressTint="@color/colorPrimaryDark"
         android:indeterminateTint="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/firstPinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:cursorVisible="true"
+        android:hint="Hint."
+        android:inputType="number"
+        android:itemBackground="@color/colorWhite"
+        android:padding="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:cursorColor="@color/colorPrimaryDark"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="46dp"
+        app:itemRadius="4dp"
+        app:itemSpacing="4dp"
+        app:itemWidth="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineColor="@color/colorPrimaryDark"
+        app:lineWidth="2dp"
+        app:viewType="rectangle"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
