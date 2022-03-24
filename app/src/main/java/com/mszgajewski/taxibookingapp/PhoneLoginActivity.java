@@ -153,10 +153,10 @@ public class PhoneLoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                super.onCodeSent(s, forceResendingToken);
+            public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                super.onCodeSent(verificationId, forceResendingToken);
 
-                mVerificationId = mVerificationId;
+                mVerificationId = verificationId;
                 mResentToken = forceResendingToken;
 
                 Toast.makeText(PhoneLoginActivity.this,"Kod wysłany", Toast.LENGTH_SHORT).show();

@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-
 public class LoginActivity extends AppCompatActivity {
 
     private Button phoneButton, googleButton;
